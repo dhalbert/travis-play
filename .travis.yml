@@ -11,7 +11,7 @@ before_script:
 
 script:
   - echo 'Message before fold' && echo -en 'travis_fold:start:test\\r'
-  - ls foobarbaz ; echo "ls status is: $?" > status
+  - ls foobarbaz ; echo ls status is: $? > status
   - echo -en 'travis_fold:end:test\\r' && cat status
 
 after_failure:
